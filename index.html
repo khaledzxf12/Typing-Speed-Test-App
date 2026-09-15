@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>اختبار سرعة الكتابة</h1>
+            <p>ابدأ الكتابة مباشرة لبدء الاختبار تلقائياً</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="stat-card">
+                <span class="stat-label">الوقت</span>
+                <span class="stat-value" id="timer">60</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">WPM</span>
+                <span class="stat-value" id="wpm">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">الدقة</span>
+                <span class="stat-value" id="accuracy">100%</span>
+            </div>
+        </div>
+
+        <div class="text-display" id="textDisplay"></div>
+
+        <div class="input-area">
+            <textarea id="textInput" placeholder="ابدأ الكتابة هنا..." rows="3"></textarea>
+        </div>
+
+        <div class="controls">
+            <button id="restartBtn">إعادة الاختبار</button>
+        </div>
+
+        <div class="modal-overlay" id="resultModal">
+            <div class="modal-content">
+                <h2>انتهى الاختبار! 🎉</h2>
+                <div class="final-stats">
+                    <p>السرعة: <strong id="finalWpm">0</strong> WPM</p>
+                    <p>الدقة: <strong id="finalAccuracy">0%</strong></p>
+                    <p>الحروف الصحيحة: <strong id="finalCorrect">0</strong></p>
+                    <p>الأخطاء: <strong id="finalErrors">0</strong></p>
+                </div>
+                <button id="modalRestartBtn">تجربة جديدة</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
